@@ -6,22 +6,45 @@ import java.util.Scanner;
 public class jogoAdivinhacao {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Random aleatorio = new Random();
+
         System.out.println("-------Jogo da Adivinhação-------");
         System.out.println();
         System.out.println("**Tente descobrir qual numero foi o sorteado**");
         System.out.println();
-        System.out.println("-----Como fuinciona o jogo?-----");
+        System.out.println("-----Como funciona o jogo?-----");
         System.out.println();
-        System.out.println("- Digite um numero aleatório;\n- Se o numero digitado for igual ao sorteado você vence;");
-        System.out.println("- Se o número digitado estiver próximo do sorteado você ganha 5 pontos;\n- Se o número digitado estiver distante do sorteado você perde o jogo;");
+        System.out.println("- Escolha a dificuldade do jogo;\n- Digite um numero aleatório dentro do intervalo escolhido;\n- Se o numero digitado for igual ao sorteado você vence;");
+        System.out.println("- Se o número digitado estiver próximo do número sorteado você ganha 5 pontos\n- Se o número digitado estiver distante do sorteado você perde o jogo;");
         System.out.println();
-        System.out.print("Digite um número aleatório de 0 a 10: ");
+        System.out.print("Selecione a Dificuldade do jogo: (1) Fácil -  (2) Normal -  (3) Difícil : ");
 
-        int numeroUsuario = input.nextInt();
+        int numeroaleatorio = 0;
+        int numeroUsuario = 0;
+        int dificuldade = input.nextInt();
+
+        switch (dificuldade){
+            case 1:
+                numeroaleatorio = aleatorio.nextInt(10);
+                System.out.print("Digite um número aleatório de 0 a 10: ");
+                numeroUsuario = input.nextInt();
+                break;
+            case 2:
+                numeroaleatorio = aleatorio.nextInt(50);
+                System.out.print("Digite um número aleatório de 0 a 50: ");
+                numeroUsuario = input.nextInt();
+                break;
+            case 3:
+                numeroaleatorio = aleatorio.nextInt(100);
+                System.out.print("Digite um número aleatório de 0 a 100: ");
+                numeroUsuario = input.nextInt();
+                break;
+        }
+
         int numero = 0;
-        Random aleatorio = new Random();
-        int numeroaleatorio = aleatorio.nextInt(10);
         int pontos = 0;
+
+        System.out.println("Teste --> número sorteado --> "+ numeroaleatorio);
 
         if (numeroUsuario<0){
             while (numeroUsuario<0){
