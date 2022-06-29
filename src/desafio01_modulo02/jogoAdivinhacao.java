@@ -44,8 +44,6 @@ public class jogoAdivinhacao {
         int numero = 0;
         int pontos = 0;
 
-        System.out.println("Teste --> número sorteado --> "+ numeroaleatorio);
-
         if (numeroUsuario<0){
             while (numeroUsuario<0){
                 System.out.println("Digite um número maior que 0");
@@ -73,7 +71,7 @@ public class jogoAdivinhacao {
                 while (numero==numeroUsuario) {
                 pontos += 5;
                 System.out.println("Foi por pouco, você conquistou mais 5 pontos. Agora você tem " + pontos + " pontos!");
-                System.out.print("Tente outra vez ou digite 00 para encerrar o jogo ");
+                System.out.print("Tente outra vez ou digite '00' para encerrar o jogo ");
                 numero = input.nextInt();
                 }
 
@@ -88,7 +86,7 @@ public class jogoAdivinhacao {
                 System.out.println("Você conquistou "+ pontos +" pontos!");
                 System.out.println("-----Game Over - Voce perdeu :( -----");
 
-            } else if (numero==00) {
+            } else if (numero== 0) {
                 System.out.println("---Jogo finalizado pelo usuário---");
                 System.out.println("Você conquistou "+ pontos +" pontos!");
             }
