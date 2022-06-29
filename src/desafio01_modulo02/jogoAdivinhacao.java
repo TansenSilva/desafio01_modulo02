@@ -6,11 +6,13 @@ import java.util.Scanner;
 public class jogoAdivinhacao {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Digite um número aleatório: ");
+        System.out.println("-------Jogo da Adivinhação-------");
+        System.out.println();
+        System.out.println("Digite um número aleatório de 0 a 10: ");
         int numeroUsuario = input.nextInt();
 
         Random aleatorio = new Random();
-        int numeroaleatorio = aleatorio.nextInt(5);
+        int numeroaleatorio = aleatorio.nextInt(10);
 
         System.out.println(numeroaleatorio);
 
