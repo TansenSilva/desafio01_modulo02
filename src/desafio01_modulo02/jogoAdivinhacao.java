@@ -14,22 +14,23 @@ public class jogoAdivinhacao {
         Random aleatorio = new Random();
         int numeroaleatorio = aleatorio.nextInt(10);
 
-        System.out.println(numeroaleatorio);
-
         int pontos = 0;
 
         if (numeroaleatorio==numeroUsuario){
+            System.out.println("O número sorteado foi: "+ numeroaleatorio);
             System.out.println("Parabéns você ganhou!!!");
             pontos += 10;
             System.out.println("Você conquistou "+ pontos +" pontos!");
         }
 
         else if (numeroUsuario < numeroaleatorio - 1 || numeroUsuario > numeroaleatorio + 1) {
-                System.out.println("Voce perdeu!");
+            System.out.println("Não foi deste vez. O número sorteado foi: "+ numeroaleatorio);
+            System.out.println("-----Game Over - Voce perdeu :( -----");
             }
 
         else {
-            System.out.println("Voce ganhou 5 pontos");
+            pontos += 5;
+            System.out.println("Você conquistou "+ pontos +" pontos!");
         }
     }
 }
