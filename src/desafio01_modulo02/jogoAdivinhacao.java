@@ -8,6 +8,7 @@ public class jogoAdivinhacao {
         Scanner input = new Scanner(System.in);
         System.out.println("-------Jogo da Adivinhação-------");
         System.out.println();
+        System.out.println("**Tente descobrir qual numero foi o sorteado**");
         System.out.println("Digite um número aleatório de 0 a 10: ");
         int numeroUsuario = input.nextInt();
 
